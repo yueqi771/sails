@@ -43,6 +43,4 @@ module.exports.routes = {
 	 * not match any of those, it is matched against static assets.             *
 	 *                                                                          *
 	 ***************************************************************************/
-
-
 };
