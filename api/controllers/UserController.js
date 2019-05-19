@@ -8,9 +8,20 @@ module.exports = {
             });
             return;
         }
+
+        // 测试helper;
+        const name = await sails.helpers.formatWelcomeMessage.with({name: '越祈'});
+        sails.log.info(name);
+
         const userData = await User.findOne({
             name: req.allParams().name,
         });
+
+        // 测试session
+        // req.session.uid = userData.id;
+        // req.session.save();
+
+        sails.log.info('session', req.session)
 
         res.send({
             code:1,
