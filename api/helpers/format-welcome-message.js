@@ -1,8 +1,8 @@
 module.exports = {
     friendlyName: "fromat welcome message",
-    
+
     description: 'return a personailzed geeting based on the provided name',
-    
+
     inputs: {
         name: {
             type: 'string',

@@ -1,6 +1,5 @@
 module.exports = {
     login: async function(req, res) {
-        console.log(req.allParams());
         if(!req.allParams().name) {
             res.send({
                 code:0,
@@ -21,7 +20,7 @@ module.exports = {
         // req.session.uid = userData.id;
         // req.session.save();
 
-        sails.log.info('session', req.session)
+        sails.log.info('session', req.cookie);
 
         res.send({
             code:1,
